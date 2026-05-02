@@ -88,8 +88,8 @@ export default function StoriesViewer({ stories, startIndex = 0, onClose }) {
   /** Share — Web Share API → fallback copy link */
   async function handleShare() {
     setPaused(true);
-    const url  = window.location.href;
-    const text = `${story.title} — Glamax CRS`;
+    const url  = `${window.location.origin}/?story=${story.id}`;
+    const text = `${storyTitle} — Glamax CRS`;
     if (navigator.share) {
       await navigator.share({ title: text, url }).catch(() => {});
     } else {

@@ -37,9 +37,14 @@ export function useProducts() {
   }, []);
 
   const removeProduct = useCallback(async (id, token) => {
-    await deleteProduct(id, token);
-    setProducts(prev => prev.filter(p => p.id !== id));
-  }, []);
+    setProducts(prev => prev.filter(p => p.id !== id)); // optimistic
+    try {
+      await deleteProduct(id, token);
+    } catch {
+      load(); // restore on failure
+      throw new Error('delete failed');
+    }
+  }, [load]);
 
   return { products, loading, error, addProduct, removeProduct, reload: load };
 }

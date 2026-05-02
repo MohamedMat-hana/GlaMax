@@ -811,6 +811,27 @@
 
 .ptab__del-btn:hover { background: rgba(232,80,80,0.2); }
 
+.ptab__confirm-row {
+  display: flex;
+  gap: 6px;
+  margin: 0 10px 8px;
+}
+.ptab__confirm-yes,
+.ptab__confirm-no {
+  flex: 1;
+  padding: 5px 8px;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.ptab__confirm-yes { background: var(--danger); color: #fff; }
+.ptab__confirm-no  { background: #eee; color: #555; }
+.ptab__confirm-yes:hover,
+.ptab__confirm-no:hover { opacity: 0.85; }
+
 .ptab__product-meta {
   display: flex;
   gap: var(--gap-sm);

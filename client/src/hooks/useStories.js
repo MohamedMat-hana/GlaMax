@@ -36,9 +36,14 @@ export function useStories() {
   }, []);
 
   const removeStory = useCallback(async (id, token) => {
-    await deleteStory(id, token);
-    setStories(prev => prev.filter(s => s.id !== id));
-  }, []);
+    setStories(prev => prev.filter(s => s.id !== id)); // optimistic
+    try {
+      await deleteStory(id, token);
+    } catch {
+      load(); // restore on failure
+      throw new Error('delete failed');
+    }
+  }, [load]);
 
   return { stories, loading, error, addStory, removeStory, reload: load };
 }

@@ -217,7 +217,8 @@ function ProductsTab({ token, show }) {
   const EMPTY = { nameAr: '', nameEn: '', price: '', categoryAr: '', categoryEn: '', descAr: '', descEn: '' };
   const [form,    setForm]    = useState(EMPTY);
   const [imgFile, setImgFile] = useState(null);
-  const [saving,  setSaving]  = useState(false);
+  const [saving,    setSaving]    = useState(false);
+  const [confirmId, setConfirmId] = useState(null);
 
   const ch = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }));
 
@@ -240,9 +241,11 @@ function ProductsTab({ token, show }) {
   }
 
   async function handleDelete(id) {
-    if (!window.confirm('حذف هذا المنتج؟')) return;
-    await removeProduct(id, token);
-    show('تم الحذف');
+    try {
+      await removeProduct(id, token);
+      show('تم الحذف');
+    } catch { show('فشل الحذف', 'error'); }
+    setConfirmId(null);
   }
 
   return (
@@ -325,7 +328,14 @@ function ProductsTab({ token, show }) {
             )}
             <p className="ptab__product-desc">{p.descAr || p.desc}</p>
             <p className="ptab__product-price">{p.price}</p>
-            <button className="ptab__del-btn" onClick={() => handleDelete(p.id)}>🗑 حذف</button>
+            {confirmId === p.id ? (
+              <div className="ptab__confirm-row">
+                <button className="ptab__confirm-yes" onClick={() => handleDelete(p.id)}>تأكيد</button>
+                <button className="ptab__confirm-no"  onClick={() => setConfirmId(null)}>إلغاء</button>
+              </div>
+            ) : (
+              <button className="ptab__del-btn" onClick={() => setConfirmId(p.id)}>🗑 حذف</button>
+            )}
             <div className="ptab__product-meta">
               <span>♥ {p.likes}</span>
             </div>
@@ -342,7 +352,8 @@ function StoriesTab({ token, show }) {
   const [titleAr, setTitleAr] = useState('');
   const [titleEn, setTitleEn] = useState('');
   const [imgFile, setImgFile] = useState(null);
-  const [saving,  setSaving]  = useState(false);
+  const [saving,    setSaving]    = useState(false);
+  const [confirmId, setConfirmId] = useState(null);
 
   async function handleAdd(e) {
     e.preventDefault();
@@ -361,9 +372,11 @@ function StoriesTab({ token, show }) {
   }
 
   async function handleDelete(id) {
-    if (!window.confirm('حذف هذا الستوري؟')) return;
-    await removeStory(id, token);
-    show('تم الحذف');
+    try {
+      await removeStory(id, token);
+      show('تم الحذف');
+    } catch { show('فشل الحذف', 'error'); }
+    setConfirmId(null);
   }
 
   return (
@@ -412,7 +425,14 @@ function StoriesTab({ token, show }) {
               <p className="stab__story-title stab__story-title--en">{s.titleEn}</p>
             )}
             <div className="stab__story-actions">
-              <button className="stab__del-btn" onClick={() => handleDelete(s.id)}>🗑</button>
+              {confirmId === s.id ? (
+                <>
+                  <button className="ptab__confirm-yes" onClick={() => handleDelete(s.id)}>تأكيد</button>
+                  <button className="ptab__confirm-no"  onClick={() => setConfirmId(null)}>إلغاء</button>
+                </>
+              ) : (
+                <button className="stab__del-btn" onClick={() => setConfirmId(s.id)}>🗑</button>
+              )}
             </div>
           </div>
         ))}
