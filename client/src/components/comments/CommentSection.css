@@ -1,0 +1,72 @@
+/**
+ * CommentSection.css — Comment thread container, input form, and list styles.
+ */
+
+.comment-section {
+  border-top: 1px solid var(--border);
+  padding-top: var(--gap-sm);
+  animation: fadeUp 0.3s ease;
+}
+
+/* ── Form ── */
+.cs-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: var(--gap-sm);
+}
+
+.cs-form__row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.cs-input {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 9px 12px;
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-family: var(--font-body);
+  width: 100%;
+  transition: border-color var(--t-fast);
+}
+
+.cs-input:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.cs-input--comment { flex: 1; }
+
+.cs-send-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  background: var(--gold);
+  color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: opacity var(--t-fast);
+}
+
+.cs-send-btn:hover   { opacity: 0.85; }
+.cs-send-btn:disabled { opacity: 0.5; }
+
+/* ── State ── */
+.cs-state {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-align: center;
+  padding: var(--gap-sm) 0;
+}
+
+/* ── List ── */
+.cs-list {
+  display: flex;
+  flex-direction: column;
+}

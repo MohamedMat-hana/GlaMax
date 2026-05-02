@@ -1,0 +1,112 @@
+/**
+ * OrderModal.css — Centered product inquiry modal styles.
+ */
+
+.om-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 800;
+  background: var(--bg-overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--gap-md);
+  animation: overlayFade 0.25s ease;
+}
+
+.om-card {
+  background: var(--bg-elevated);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border);
+  padding: var(--gap-lg);
+  width: 100%;
+  max-width: 440px;
+  position: relative;
+  animation: modalRise 0.35s var(--t-slow);
+  box-shadow: var(--shadow-modal);
+}
+
+.om-close {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  color: var(--text-muted);
+  font-size: 1rem;
+  transition: color var(--t-fast);
+}
+
+.om-close:hover { color: var(--text-primary); }
+
+/* ── Product preview ── */
+.om-product {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+  margin-bottom: var(--gap-md);
+}
+
+.om-product__img {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.om-product__name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.om-product__price {
+  font-family: var(--font-display);
+  color: var(--gold);
+  font-size: 0.95rem;
+}
+
+.om-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.om-message {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: var(--gap-sm);
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  white-space: pre-line;
+  line-height: 1.7;
+  margin-bottom: var(--gap-md);
+}
+
+.om-actions {
+  display: flex;
+  gap: var(--gap-sm);
+}
+
+.om-btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: var(--radius-btn);
+  font-size: 0.9rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  transition: opacity var(--t-fast);
+}
+
+.om-btn:hover { opacity: 0.88; }
+
+.om-btn--copy {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+}
+
+.om-btn--ig {
+  background: var(--grad-ig);
+  color: #fff;
+}

@@ -1,0 +1,167 @@
+/**
+ * StoryReplyModal.css — Bottom-sheet slide-up for in-app story replies.
+ */
+
+.srm-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 950;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  animation: overlayFade 0.2s ease;
+}
+
+.srm-sheet {
+  width: 100%;
+  max-width: 560px;
+  background: var(--bg-elevated);
+  border-radius: 24px 24px 0 0;
+  padding: var(--gap-lg) var(--gap-md) var(--gap-xl);
+  position: relative;
+  animation: slideUp 0.35s var(--t-slow);
+  border-top: 1px solid var(--border);
+  box-shadow: var(--shadow-modal);
+}
+
+.srm-close {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  color: var(--text-muted);
+  font-size: 1rem;
+  transition: color var(--t-fast);
+  line-height: 1;
+}
+
+.srm-close:hover { color: var(--text-primary); }
+
+/* ── Story info strip ── */
+.srm-story-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: var(--gap-md);
+}
+
+.srm-story-thumb {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--gold);
+  flex-shrink: 0;
+}
+
+.srm-story-emoji {
+  font-size: 2.2rem;
+}
+
+.srm-story-label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.srm-story-title {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--gold);
+}
+
+/* ── Form ── */
+.srm-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+}
+
+.srm-input,
+.srm-textarea {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 11px 14px;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-family: var(--font-body);
+  width: 100%;
+  resize: none;
+  transition: border-color var(--t-fast);
+}
+
+.srm-input:focus,
+.srm-textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.srm-send-btn {
+  padding: 13px;
+  border-radius: var(--radius-btn);
+  background: var(--grad-gold);
+  color: var(--bg);
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  transition: opacity var(--t-fast), transform var(--t-fast);
+}
+
+.srm-send-btn:hover:not(:disabled) {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.srm-send-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* ── Success state ── */
+.srm-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-sm);
+  padding: var(--gap-lg) 0;
+  text-align: center;
+  animation: scaleIn 0.3s ease;
+}
+
+.srm-success__icon {
+  font-size: 3.5rem;
+}
+
+.srm-success__title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.srm-success__sub {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.srm-open-chat-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: var(--radius-pill);
+  background: var(--grad-gold);
+  color: var(--bg);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-top: var(--gap-sm);
+  transition: opacity var(--t-fast), transform var(--t-fast);
+}
+
+.srm-open-chat-btn:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+}

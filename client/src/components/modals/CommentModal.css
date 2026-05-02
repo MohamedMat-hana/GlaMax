@@ -1,0 +1,99 @@
+/**
+ * CommentModal.css — Product comment overlay modal styles.
+ */
+
+.cm-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 700;
+  background: var(--bg-overlay);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  animation: overlayFade 0.22s ease;
+}
+
+@media (min-width: 600px) {
+  .cm-backdrop {
+    align-items: center;
+  }
+}
+
+.cm-panel {
+  width: 100%;
+  max-width: 560px;
+  max-height: 88vh;
+  background: var(--bg-elevated);
+  border-radius: 24px 24px 0 0;
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 0.32s var(--t-slow);
+  border-top: 1px solid var(--border);
+  overflow: hidden;
+}
+
+@media (min-width: 600px) {
+  .cm-panel {
+    border-radius: var(--radius-card);
+    animation: modalRise 0.32s var(--t-slow);
+    max-height: 80vh;
+  }
+}
+
+/* ── Header ── */
+.cm-header {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  background: var(--bg-card);
+}
+
+.cm-header__img {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.cm-header__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.cm-header__name {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cm-header__price {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  color: var(--gold);
+}
+
+.cm-header__close {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  padding: 4px 8px;
+  transition: color var(--t-fast);
+  flex-shrink: 0;
+}
+
+.cm-header__close:hover { color: var(--text-primary); }
+
+/* ── Body ── */
+.cm-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--gap-md);
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold-dark) transparent;
+}

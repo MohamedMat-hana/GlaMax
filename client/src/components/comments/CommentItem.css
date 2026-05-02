@@ -1,0 +1,123 @@
+/**
+ * CommentItem.css — Styles for a single comment row with replies.
+ */
+
+.comment-item {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  border-top: 1px solid var(--border);
+  animation: fadeUp 0.3s ease;
+}
+
+.comment-item__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.comment-item__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+
+.comment-item__name {
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.comment-item__crown {
+  font-size: 0.72rem;
+  background: var(--gold-glow);
+  color: var(--gold);
+  border: 1px solid var(--border);
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+}
+
+.comment-item__time {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.comment-item__text {
+  font-size: 0.88rem;
+  color: var(--text-soft);
+  line-height: 1.6;
+  margin-bottom: 6px;
+  word-break: break-word;
+}
+
+.comment-item__actions {
+  display: flex;
+  gap: var(--gap-md);
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.comment-item__like-btn,
+.comment-item__reply-btn,
+.comment-item__del-btn {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  transition: color var(--t-fast);
+  padding: 2px 0;
+}
+
+.comment-item__like-btn:hover  { color: var(--danger); }
+.comment-item__reply-btn:hover { color: var(--gold); }
+.comment-item__del-btn:hover   { color: var(--danger); }
+
+/* ── Reply form ── */
+.comment-item__reply-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.comment-item__reply-name,
+.comment-item__reply-input {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-family: var(--font-body);
+  width: 100%;
+  transition: border-color var(--t-fast);
+}
+
+.comment-item__reply-name:focus,
+.comment-item__reply-input:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.comment-item__reply-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.comment-item__reply-send {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: var(--gold);
+  color: var(--bg);
+  font-size: 1rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: opacity var(--t-fast);
+}
+
+.comment-item__reply-send:hover   { opacity: 0.85; }
+.comment-item__reply-send:disabled { opacity: 0.5; }

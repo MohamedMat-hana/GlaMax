@@ -1,0 +1,49 @@
+/**
+ * Footer.css — Footer section styles.
+ */
+
+.footer {
+  text-align: center;
+  padding: var(--gap-xl) var(--gap-md) var(--gap-lg);
+  border-top: 1px solid var(--border);
+  margin-top: var(--gap-xl);
+}
+
+.footer__brand {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--gold);
+  letter-spacing: 3px;
+  margin-bottom: 6px;
+}
+
+.footer__copy {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: var(--gap-md);
+}
+
+.footer__socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--gap-sm);
+}
+
+.footer__social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  background: var(--bg-card);
+  transition: border-color var(--t-fast), color var(--t-fast);
+}
+
+.footer__social-link:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}

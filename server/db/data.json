@@ -1,0 +1,1296 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Velvet Matte Lipstick",
+      "price": "199 ج",
+      "category": "Lips",
+      "img": "",
+      "desc": "لون عاطق عميق يدوم طوال اليوم",
+      "likes": 24,
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "2",
+      "name": "Glow Foundation",
+      "price": "349 ج",
+      "category": "Face",
+      "img": "",
+      "desc": "تغطية كاملة مع لمسة ندية طبيعية",
+      "likes": 19,
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "3",
+      "name": "Smoky Eye Palette",
+      "price": "275 ج",
+      "category": "Eyes",
+      "img": "",
+      "desc": "9 درجات من الداكن إلى النود",
+      "likes": 31,
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "4",
+      "name": "Rose Glow Blush",
+      "price": "149 ج",
+      "category": "Face",
+      "img": "",
+      "desc": "بلشر وردي بفضى إشراقة طبيعية",
+      "likes": 9,
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "ebcba2f1-488b-4109-8c16-7ccfd61e09a6",
+      "name": "sss",
+      "price": "12131",
+      "category": ";l;",
+      "img": "/uploads/1777633514551-rfsi7azcb3.jpeg",
+      "desc": "mnlklkn",
+      "likes": 2,
+      "createdAt": 1777633514590
+    },
+    {
+      "id": "579588be-d67b-428c-aa55-ac18ed693743",
+      "nameAr": "المجموعات ",
+      "nameEn": "sets1",
+      "price": "12131",
+      "categoryAr": "يسيس",
+      "categoryEn": "ааа",
+      "img": "/uploads/1777652989137-o37z6k07x.jpeg",
+      "descAr": "يسنبتيخبتشيحخهبتحيخهت",
+      "descEn": "ааааааааааааааа",
+      "likes": 2,
+      "createdAt": 1777652989151
+    }
+  ],
+  "stories": [
+    {
+      "id": "1",
+      "title": "عروض الأسبوع ✨",
+      "img": "",
+      "duration": 5000,
+      "createdAt": 1700000000000,
+      "views": 1
+    },
+    {
+      "id": "2",
+      "title": "لوك الصيف 🌸",
+      "img": "",
+      "duration": 5000,
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "3",
+      "title": "كولكشن جديد 🎀",
+      "img": "",
+      "duration": 5000,
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "0cc4b8b6-b69c-41e5-902d-06ef5b8a08ae",
+      "title": "kjkjkjk",
+      "img": "/uploads/1777650641836-2xul4cs8fhu.jpeg",
+      "duration": 5000,
+      "createdAt": 1777650641858
+    },
+    {
+      "id": "44cf8d6b-67e5-474e-ae28-096776f9f4aa",
+      "titleAr": "kjnlkn",
+      "titleEn": "lkjkk",
+      "img": "/uploads/1777653256339-adv9mtgvnde.jpeg",
+      "duration": 5000,
+      "createdAt": 1777653256347,
+      "views": 4
+    },
+    {
+      "id": "2f05a936-faff-4a0e-8a56-70f74c7d9cf9",
+      "titleAr": "56464",
+      "titleEn": "2615",
+      "img": "/uploads/1777709145926-ud9hvc3579m.png",
+      "duration": 5000,
+      "createdAt": 1777709145933
+    }
+  ],
+  "comments": {
+    "1": [
+      {
+        "id": "3e37c331-6423-489d-8481-648e8f2b5a92",
+        "productId": "1",
+        "name": "ss",
+        "text": "ss",
+        "isAdmin": false,
+        "likes": 0,
+        "ts": 1777650501830,
+        "replies": []
+      }
+    ],
+    "4": [
+      {
+        "id": "33880f54-2032-4934-969c-7544b4389c63",
+        "productId": "4",
+        "name": "kjkj",
+        "text": "kjlj",
+        "isAdmin": false,
+        "likes": 1,
+        "ts": 1777633390266,
+        "replies": [
+          {
+            "id": "cd75a620-49e3-483d-8eb0-48deea75e53c",
+            "name": "kjkij",
+            "text": "ikij",
+            "isAdmin": false,
+            "likes": 0,
+            "ts": 1777633398899
+          },
+          {
+            "id": "118734f1-3602-4f75-9f2a-7ca81d8619d0",
+            "name": "jjj",
+            "text": "jhj",
+            "isAdmin": false,
+            "likes": 0,
+            "ts": 1777633463705
+          }
+        ]
+      },
+      {
+        "id": "67744165-7d0e-480b-8cec-ac8c7f4137c6",
+        "productId": "4",
+        "name": "jjj",
+        "text": "jhj",
+        "isAdmin": false,
+        "likes": 0,
+        "ts": 1777633455341,
+        "replies": []
+      }
+    ],
+    "ebcba2f1-488b-4109-8c16-7ccfd61e09a6": [
+      {
+        "id": "895e3cd7-d0cf-4483-aa90-44eb51aa67bc",
+        "productId": "ebcba2f1-488b-4109-8c16-7ccfd61e09a6",
+        "name": "kk",
+        "text": "kk",
+        "isAdmin": false,
+        "likes": 0,
+        "ts": 1777633627299,
+        "replies": []
+      },
+      {
+        "id": "86310440-31bb-4d6e-94da-f477a04f795f",
+        "productId": "ebcba2f1-488b-4109-8c16-7ccfd61e09a6",
+        "name": "dsa",
+        "text": "d",
+        "isAdmin": false,
+        "likes": 0,
+        "ts": 1777653405068,
+        "replies": []
+      },
+      {
+        "id": "04285d5c-9170-45d6-8bf9-911e93bbdf82",
+        "productId": "ebcba2f1-488b-4109-8c16-7ccfd61e09a6",
+        "name": "dsa",
+        "text": "d",
+        "isAdmin": false,
+        "likes": 0,
+        "ts": 1777653406551,
+        "replies": []
+      },
+      {
+        "id": "b4434ada-6105-44ae-bc46-342660626ffa",
+        "productId": "ebcba2f1-488b-4109-8c16-7ccfd61e09a6",
+        "name": "dsa",
+        "text": "d",
+        "isAdmin": false,
+        "likes": 0,
+        "ts": 1777653407570,
+        "replies": []
+      },
+      {
+        "id": "fa3e04d9-0728-4b5f-9c9f-f110b2ccccc3",
+        "productId": "ebcba2f1-488b-4109-8c16-7ccfd61e09a6",
+        "name": "dsa",
+        "text": "sd",
+        "isAdmin": false,
+        "likes": 0,
+        "ts": 1777653409683,
+        "replies": []
+      }
+    ]
+  },
+  "users": [
+    {
+      "name": "jjj",
+      "email": "",
+      "since": 1777633448964
+    },
+    {
+      "name": "sss",
+      "email": "ss@s2s.s",
+      "since": 1777707957684
+    },
+    {
+      "name": "da",
+      "email": "",
+      "since": 1777708488184
+    },
+    {
+      "name": "hh",
+      "email": "",
+      "since": 1777710623777
+    }
+  ],
+  "storyReplies": [
+    {
+      "id": "8f74abe3-fa4e-4599-ac3b-c33669759826",
+      "storyId": "0cc4b8b6-b69c-41e5-902d-06ef5b8a08ae",
+      "storyTitleAr": "kjkjkjk",
+      "storyTitleEn": "kjkjkjk",
+      "storyImg": "/uploads/1777650641836-2xul4cs8fhu.jpeg",
+      "senderName": "аа",
+      "message": "аа",
+      "ts": 1777653026875,
+      "read": false
+    },
+    {
+      "id": "f95c5f01-01cb-495a-995c-07aa87c8317c",
+      "storyId": "44cf8d6b-67e5-474e-ae28-096776f9f4aa",
+      "storyTitleAr": "kjnlkn",
+      "storyTitleEn": "lkjkk",
+      "storyImg": "/uploads/1777653256339-adv9mtgvnde.jpeg",
+      "senderName": "kkk",
+      "message": "jnnj",
+      "ts": 1777653655328,
+      "read": false
+    },
+    {
+      "id": "c5721e5c-1228-424b-93d9-26efd4ffab61",
+      "storyId": "44cf8d6b-67e5-474e-ae28-096776f9f4aa",
+      "storyTitleAr": "kjnlkn",
+      "storyTitleEn": "lkjkk",
+      "storyImg": "/uploads/1777653256339-adv9mtgvnde.jpeg",
+      "senderName": "dddd",
+      "message": "d",
+      "ts": 1777654353427,
+      "read": false
+    },
+    {
+      "id": "371a7fc9-655c-4d05-9332-27c0cd6e579e",
+      "storyId": "44cf8d6b-67e5-474e-ae28-096776f9f4aa",
+      "storyTitleAr": "kjnlkn",
+      "storyTitleEn": "lkjkk",
+      "storyImg": "/uploads/1777653256339-adv9mtgvnde.jpeg",
+      "senderName": "ddddيي",
+      "message": "يي",
+      "ts": 1777707745453,
+      "read": false
+    },
+    {
+      "id": "6a19f628-b4b1-442e-a878-0d2a3012c7d1",
+      "storyId": "44cf8d6b-67e5-474e-ae28-096776f9f4aa",
+      "storyTitleAr": "kjnlkn",
+      "storyTitleEn": "lkjkk",
+      "storyImg": "/uploads/1777653256339-adv9mtgvnde.jpeg",
+      "senderName": "sss",
+      "message": "dd",
+      "ts": 1777708103802,
+      "read": false
+    },
+    {
+      "id": "459eb11f-6ec5-4df2-beec-b769e3e4d2fc",
+      "storyId": "44cf8d6b-67e5-474e-ae28-096776f9f4aa",
+      "storyTitleAr": "kjnlkn",
+      "storyTitleEn": "lkjkk",
+      "storyImg": "/uploads/1777653256339-adv9mtgvnde.jpeg",
+      "senderName": "sss",
+      "message": "d",
+      "ts": 1777708438089,
+      "read": false
+    },
+    {
+      "id": "e5a87440-f500-48b9-9b80-f0393574b924",
+      "storyId": "44cf8d6b-67e5-474e-ae28-096776f9f4aa",
+      "storyTitleAr": "kjnlkn",
+      "storyTitleEn": "lkjkk",
+      "storyImg": "/uploads/1777653256339-adv9mtgvnde.jpeg",
+      "senderName": "sss",
+      "message": "ddd",
+      "ts": 1777708444344,
+      "read": false
+    },
+    {
+      "id": "ba58f187-fa84-40e9-98d7-d72c2f10c3d2",
+      "storyId": "1",
+      "storyTitleAr": "عروض الأسبوع ✨",
+      "storyTitleEn": "عروض الأسبوع ✨",
+      "storyImg": "",
+      "senderName": "sss",
+      "message": "dd",
+      "ts": 1777708449601,
+      "read": false
+    },
+    {
+      "id": "a5c5448d-ff7b-43f0-a0d5-e02b92f66824",
+      "storyId": "44cf8d6b-67e5-474e-ae28-096776f9f4aa",
+      "storyTitleAr": "kjnlkn",
+      "storyTitleEn": "lkjkk",
+      "storyImg": "/uploads/1777653256339-adv9mtgvnde.jpeg",
+      "senderName": "ssshh",
+      "message": "jj",
+      "ts": 1777708898900,
+      "read": false
+    },
+    {
+      "id": "1f23c27a-f5b2-4525-87fe-b7d7fe327404",
+      "storyId": "44cf8d6b-67e5-474e-ae28-096776f9f4aa",
+      "storyTitleAr": "kjnlkn",
+      "storyTitleEn": "lkjkk",
+      "storyImg": "/uploads/1777653256339-adv9mtgvnde.jpeg",
+      "senderName": "ssshh",
+      "message": "6545",
+      "ts": 1777708921334,
+      "read": false
+    },
+    {
+      "id": "5f9f1d87-1727-495f-b607-e13a5771cbca",
+      "storyId": "44cf8d6b-67e5-474e-ae28-096776f9f4aa",
+      "storyTitleAr": "kjnlkn",
+      "storyTitleEn": "lkjkk",
+      "storyImg": "/uploads/1777653256339-adv9mtgvnde.jpeg",
+      "senderName": "ssshh",
+      "message": "بكام دي",
+      "ts": 1777708973951,
+      "read": false
+    },
+    {
+      "id": "f62d7cca-b197-4631-ad4d-e5b6d1bd18ce",
+      "storyId": "44cf8d6b-67e5-474e-ae28-096776f9f4aa",
+      "storyTitleAr": "kjnlkn",
+      "storyTitleEn": "lkjkk",
+      "storyImg": "/uploads/1777653256339-adv9mtgvnde.jpeg",
+      "senderName": "ssshhdd",
+      "message": "dd",
+      "ts": 1777709029673,
+      "read": false
+    },
+    {
+      "id": "f526ae96-c236-4e6b-89a5-98620e29e0f1",
+      "storyId": "44cf8d6b-67e5-474e-ae28-096776f9f4aa",
+      "storyTitleAr": "kjnlkn",
+      "storyTitleEn": "lkjkk",
+      "storyImg": "/uploads/1777653256339-adv9mtgvnde.jpeg",
+      "senderName": "ssshhdd",
+      "message": "بكام",
+      "ts": 1777709045559,
+      "read": false
+    },
+    {
+      "id": "185fc110-e01e-4d07-8729-879cb8325cde",
+      "storyId": "2f05a936-faff-4a0e-8a56-70f74c7d9cf9",
+      "storyTitleAr": "56464",
+      "storyTitleEn": "2615",
+      "storyImg": "/uploads/1777709145926-ud9hvc3579m.png",
+      "senderName": "ssshhdddd",
+      "message": "dddd",
+      "ts": 1777709175205,
+      "read": false
+    },
+    {
+      "id": "d1888b6b-f2a5-4497-b098-36a33d34eb03",
+      "storyId": "2f05a936-faff-4a0e-8a56-70f74c7d9cf9",
+      "storyTitleAr": "56464",
+      "storyTitleEn": "2615",
+      "storyImg": "/uploads/1777709145926-ud9hvc3579m.png",
+      "senderName": "hh",
+      "message": "jjj",
+      "ts": 1777710636144,
+      "read": false
+    },
+    {
+      "id": "88117acf-2482-49f7-b68e-254ad2aaef44",
+      "storyId": "2f05a936-faff-4a0e-8a56-70f74c7d9cf9",
+      "storyTitleAr": "56464",
+      "storyTitleEn": "2615",
+      "storyImg": "/uploads/1777709145926-ud9hvc3579m.png",
+      "senderName": "hhvvv",
+      "message": "vv",
+      "ts": 1777710847701,
+      "read": false
+    }
+  ],
+  "notifications": [
+    {
+      "id": "f8d7f6e3-1741-4d10-a7fa-9d1b103212e8",
+      "type": "story_reply",
+      "replyId": "8f74abe3-fa4e-4599-ac3b-c33669759826",
+      "storyTitleAr": "kjkjkjk",
+      "storyTitleEn": "kjkjkjk",
+      "storyImg": "/uploads/1777650641836-2xul4cs8fhu.jpeg",
+      "senderName": "аа",
+      "messagePreview": "аа",
+      "ts": 1777653026875,
+      "read": true
+    },
+    {
+      "id": "af79405f-a596-47d2-97a4-3ecd701ae883",
+      "type": "like",
+      "productId": "ebcba2f1-488b-4109-8c16-7ccfd61e09a6",
+      "productNameAr": "sss",
+      "productNameEn": "sss",
+      "productImg": "/uploads/1777633514551-rfsi7azcb3.jpeg",
+      "ts": 1777653529158,
+      "read": true
+    },
+    {
+      "id": "f0093be9-53a9-4c03-af45-cc676b3f832d",
+      "type": "story_reply",
+      "replyId": "f95c5f01-01cb-495a-995c-07aa87c8317c",
+      "storyTitleAr": "kjnlkn",
+      "storyTitleEn": "lkjkk",
+      "storyImg": "/uploads/1777653256339-adv9mtgvnde.jpeg",
+      "senderName": "kkk",
+      "messagePreview": "jnnj",
+      "ts": 1777653655328,
+      "read": true
+    },
+    {
+      "id": "3d5a63e1-ee34-4c72-8f0a-801ba36ad5d2",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "j",
+      "ts": 1777654292606,
+      "read": true
+    },
+    {
+      "id": "24d4d553-9353-47e5-a08d-7938bd24c305",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "ddd",
+      "ts": 1777654320682,
+      "read": true
+    },
+    {
+      "id": "43a0feeb-571f-40ba-8398-d89e43306e26",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "ssd",
+      "ts": 1777654324647,
+      "read": true
+    },
+    {
+      "id": "ccb8bd47-927b-42e0-9bec-a2125a3fe227",
+      "type": "story_reply",
+      "replyId": "c5721e5c-1228-424b-93d9-26efd4ffab61",
+      "storyTitleAr": "kjnlkn",
+      "storyTitleEn": "lkjkk",
+      "storyImg": "/uploads/1777653256339-adv9mtgvnde.jpeg",
+      "senderName": "dddd",
+      "messagePreview": "d",
+      "ts": 1777654353427,
+      "read": true
+    },
+    {
+      "id": "61fcd1f3-787b-4174-970e-a7ac83cfd76a",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "ردّ على الستوري \"kjnlkn\": d",
+      "ts": 1777654353445,
+      "read": true
+    },
+    {
+      "id": "5c8f4970-cbbd-4409-aeb3-288ffd4a20f0",
+      "type": "like",
+      "productId": "2",
+      "productNameAr": "Glow Foundation",
+      "productNameEn": "Glow Foundation",
+      "productImg": "",
+      "ts": 1777707283220,
+      "read": true
+    },
+    {
+      "id": "dc08e8e2-d11f-4af2-92a5-e25d8c1b85ba",
+      "type": "story_reply",
+      "replyId": "371a7fc9-655c-4d05-9332-27c0cd6e579e",
+      "storyTitleAr": "kjnlkn",
+      "storyTitleEn": "lkjkk",
+      "storyImg": "/uploads/1777653256339-adv9mtgvnde.jpeg",
+      "senderName": "ddddيي",
+      "messagePreview": "يي",
+      "ts": 1777707745453,
+      "read": true
+    },
+    {
+      "id": "3fb7c968-31a6-4b02-8959-81448d23a1b2",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "ردّ على الستوري \"kjnlkn\": يي",
+      "ts": 1777707745471,
+      "read": true
+    },
+    {
+      "id": "1c346f3c-8d33-4f00-aa6c-e2b92cf69b2d",
+      "type": "story_reply",
+      "replyId": "6a19f628-b4b1-442e-a878-0d2a3012c7d1",
+      "storyTitleAr": "kjnlkn",
+      "storyTitleEn": "lkjkk",
+      "storyImg": "/uploads/1777653256339-adv9mtgvnde.jpeg",
+      "senderName": "sss",
+      "messagePreview": "dd",
+      "ts": 1777708103802,
+      "read": true
+    },
+    {
+      "id": "10d0c017-1a5c-48dd-a3c1-c98dd8e8ae76",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "ردّ على الستوري \"kjnlkn\": dd",
+      "ts": 1777708103822,
+      "read": true
+    },
+    {
+      "id": "7f11eb57-8f62-4494-9e6a-11f5101543b1",
+      "type": "story_reply",
+      "replyId": "459eb11f-6ec5-4df2-beec-b769e3e4d2fc",
+      "storyTitleAr": "kjnlkn",
+      "storyTitleEn": "lkjkk",
+      "storyImg": "/uploads/1777653256339-adv9mtgvnde.jpeg",
+      "senderName": "sss",
+      "messagePreview": "d",
+      "ts": 1777708438089,
+      "read": true
+    },
+    {
+      "id": "6c3e3468-f007-4bd0-bfe6-65cb2aa5e806",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "d",
+      "ts": 1777708438106,
+      "read": true
+    },
+    {
+      "id": "5cb13e73-996d-438f-acda-3ee809cd2e29",
+      "type": "story_reply",
+      "replyId": "e5a87440-f500-48b9-9b80-f0393574b924",
+      "storyTitleAr": "kjnlkn",
+      "storyTitleEn": "lkjkk",
+      "storyImg": "/uploads/1777653256339-adv9mtgvnde.jpeg",
+      "senderName": "sss",
+      "messagePreview": "ddd",
+      "ts": 1777708444344,
+      "read": true
+    },
+    {
+      "id": "5a60bcca-c885-4057-932f-12d52354da32",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "ddd",
+      "ts": 1777708444360,
+      "read": true
+    },
+    {
+      "id": "7c103b6e-5735-4d30-9589-9eb22cca5a08",
+      "type": "story_reply",
+      "replyId": "ba58f187-fa84-40e9-98d7-d72c2f10c3d2",
+      "storyTitleAr": "عروض الأسبوع ✨",
+      "storyTitleEn": "عروض الأسبوع ✨",
+      "storyImg": "",
+      "senderName": "sss",
+      "messagePreview": "dd",
+      "ts": 1777708449601,
+      "read": true
+    },
+    {
+      "id": "b4db7d99-2f78-4230-bf38-c4009bcd0e5c",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "dd",
+      "ts": 1777708449617,
+      "read": true
+    },
+    {
+      "id": "37967cd0-84dd-45e0-88ed-4bf52f811a60",
+      "type": "like",
+      "productId": "ebcba2f1-488b-4109-8c16-7ccfd61e09a6",
+      "productNameAr": "sss",
+      "productNameEn": "sss",
+      "productImg": "/uploads/1777633514551-rfsi7azcb3.jpeg",
+      "ts": 1777708459833,
+      "read": true
+    },
+    {
+      "id": "6995a07d-366b-4b45-b57a-d19b9f62950c",
+      "type": "story_reply",
+      "replyId": "a5c5448d-ff7b-43f0-a0d5-e02b92f66824",
+      "storyTitleAr": "kjnlkn",
+      "storyTitleEn": "lkjkk",
+      "storyImg": "/uploads/1777653256339-adv9mtgvnde.jpeg",
+      "senderName": "ssshh",
+      "messagePreview": "jj",
+      "ts": 1777708898900,
+      "read": true
+    },
+    {
+      "id": "25b9a5da-d559-4ad1-8609-a9c0f0676817",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "jj",
+      "ts": 1777708898919,
+      "read": true
+    },
+    {
+      "id": "f8246209-cd97-451e-9fd6-66864a64426f",
+      "type": "story_reply",
+      "replyId": "1f23c27a-f5b2-4525-87fe-b7d7fe327404",
+      "storyTitleAr": "kjnlkn",
+      "storyTitleEn": "lkjkk",
+      "storyImg": "/uploads/1777653256339-adv9mtgvnde.jpeg",
+      "senderName": "ssshh",
+      "messagePreview": "6545",
+      "ts": 1777708921334,
+      "read": true
+    },
+    {
+      "id": "566f9d68-531e-4a2d-b83f-27d598eec423",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "6545",
+      "ts": 1777708921350,
+      "read": true
+    },
+    {
+      "id": "81a564d5-f9fc-4d14-8e91-4fa5ef3bc073",
+      "type": "story_reply",
+      "replyId": "5f9f1d87-1727-495f-b607-e13a5771cbca",
+      "storyTitleAr": "kjnlkn",
+      "storyTitleEn": "lkjkk",
+      "storyImg": "/uploads/1777653256339-adv9mtgvnde.jpeg",
+      "senderName": "ssshh",
+      "messagePreview": "بكام دي",
+      "ts": 1777708973951,
+      "read": true
+    },
+    {
+      "id": "5da86226-f240-422b-b12a-383114517af5",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "بكام دي",
+      "ts": 1777708973967,
+      "read": true
+    },
+    {
+      "id": "d7498247-a0a7-4c43-b0c6-634adf27f428",
+      "type": "story_reply",
+      "replyId": "f62d7cca-b197-4631-ad4d-e5b6d1bd18ce",
+      "storyTitleAr": "kjnlkn",
+      "storyTitleEn": "lkjkk",
+      "storyImg": "/uploads/1777653256339-adv9mtgvnde.jpeg",
+      "senderName": "ssshhdd",
+      "messagePreview": "dd",
+      "ts": 1777709029673,
+      "read": true
+    },
+    {
+      "id": "3678b688-e55f-45f1-942c-26a94e5dae3b",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "dd",
+      "ts": 1777709029689,
+      "read": true
+    },
+    {
+      "id": "684f9294-e479-4651-9652-952112cbe4b1",
+      "type": "story_reply",
+      "replyId": "f526ae96-c236-4e6b-89a5-98620e29e0f1",
+      "storyTitleAr": "kjnlkn",
+      "storyTitleEn": "lkjkk",
+      "storyImg": "/uploads/1777653256339-adv9mtgvnde.jpeg",
+      "senderName": "ssshhdd",
+      "messagePreview": "بكام",
+      "ts": 1777709045559,
+      "read": true
+    },
+    {
+      "id": "690fa093-590e-4c98-9170-80c876e53d7e",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "بكام",
+      "ts": 1777709045579,
+      "read": true
+    },
+    {
+      "id": "95e32963-4ce9-4407-95d3-cc60dc24f2b7",
+      "type": "story_reply",
+      "replyId": "185fc110-e01e-4d07-8729-879cb8325cde",
+      "storyTitleAr": "56464",
+      "storyTitleEn": "2615",
+      "storyImg": "/uploads/1777709145926-ud9hvc3579m.png",
+      "senderName": "ssshhdddd",
+      "messagePreview": "dddd",
+      "ts": 1777709175205,
+      "read": true
+    },
+    {
+      "id": "90a0d33d-e374-4650-aeea-03b301b98a5c",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "dddd",
+      "ts": 1777709175224,
+      "read": true
+    },
+    {
+      "id": "70a87b95-c906-476a-bb68-98cb81cb6050",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "dd",
+      "ts": 1777709247709,
+      "read": true
+    },
+    {
+      "id": "420d3f26-db15-4f31-9515-88a7e9cacbad",
+      "type": "chat",
+      "chatId": "45f3431d-5e7a-473f-b940-56cf3cff161c",
+      "userName": "mo",
+      "messagePreview": "jo",
+      "ts": 1777709286311,
+      "read": true
+    },
+    {
+      "id": "51f417a4-d909-4001-b01d-50c97c1e6643",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "55",
+      "ts": 1777710529216,
+      "read": false
+    },
+    {
+      "id": "0e63760b-fbce-4052-8199-e3f32680db14",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "4",
+      "ts": 1777710548003,
+      "read": false
+    },
+    {
+      "id": "035ca968-ab36-4f4d-8e0a-50f01348e59e",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "55",
+      "ts": 1777710617480,
+      "read": false
+    },
+    {
+      "id": "db5518a5-8285-4275-aa0f-655acc817661",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "j",
+      "ts": 1777710629392,
+      "read": false
+    },
+    {
+      "id": "8a65c009-5062-432b-8e76-5bab86cefb91",
+      "type": "story_reply",
+      "replyId": "d1888b6b-f2a5-4497-b098-36a33d34eb03",
+      "storyTitleAr": "56464",
+      "storyTitleEn": "2615",
+      "storyImg": "/uploads/1777709145926-ud9hvc3579m.png",
+      "senderName": "hh",
+      "messagePreview": "jjj",
+      "ts": 1777710636144,
+      "read": false
+    },
+    {
+      "id": "a297b102-d832-4426-851a-c2e9f58bf9fe",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "jjj",
+      "ts": 1777710636163,
+      "read": false
+    },
+    {
+      "id": "96a48f13-c129-4e12-8f78-b109efda9831",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "g",
+      "ts": 1777710829165,
+      "read": false
+    },
+    {
+      "id": "199f3104-6e6b-4849-b182-dd29f424c20b",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "v",
+      "ts": 1777710841310,
+      "read": false
+    },
+    {
+      "id": "672e3d1e-58b0-4c24-ac8f-725e50b7a9aa",
+      "type": "story_reply",
+      "replyId": "88117acf-2482-49f7-b68e-254ad2aaef44",
+      "storyTitleAr": "56464",
+      "storyTitleEn": "2615",
+      "storyImg": "/uploads/1777709145926-ud9hvc3579m.png",
+      "senderName": "hhvvv",
+      "messagePreview": "vv",
+      "ts": 1777710847701,
+      "read": false
+    },
+    {
+      "id": "ee9d252b-0468-478d-91e7-5e0b2901e844",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "vv",
+      "ts": 1777710847723,
+      "read": false
+    },
+    {
+      "id": "e49a9058-2062-4cc2-bb5a-3c8a93a9372e",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "ss",
+      "ts": 1777710853317,
+      "read": false
+    },
+    {
+      "id": "d2082e4f-a0bf-4561-9731-b6f7a88da4d1",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "d",
+      "ts": 1777710875022,
+      "read": false
+    },
+    {
+      "id": "516f78cf-c797-4f9a-8b79-06dac7ddc5d9",
+      "type": "chat",
+      "chatId": "45f3431d-5e7a-473f-b940-56cf3cff161c",
+      "userName": "mo",
+      "messagePreview": "d",
+      "ts": 1777710889830,
+      "read": false
+    },
+    {
+      "id": "976b9a57-8ddf-4506-9e53-b0981704b2db",
+      "type": "chat",
+      "chatId": "45f3431d-5e7a-473f-b940-56cf3cff161c",
+      "userName": "mo",
+      "messagePreview": "d",
+      "ts": 1777710894334,
+      "read": false
+    },
+    {
+      "id": "593b1631-9538-497e-beaf-ab57dd35657c",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "s",
+      "ts": 1777710956566,
+      "read": false
+    },
+    {
+      "id": "edf6b012-eca8-4591-86ea-a34a27543bf7",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "رد",
+      "ts": 1777710984318,
+      "read": false
+    },
+    {
+      "id": "58ae9918-b7f2-4423-8ddd-abc023f196ce",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "أنا مهتمة بـ \"Velvet Matte Lipstick\" بسعر 199 ج 😍",
+      "ts": 1777711083902,
+      "read": false
+    },
+    {
+      "id": "0ca394d3-5d59-4ccb-8d9c-875f6949cda4",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "أنا مهتمة بـ \"Rose Glow Blush\" بسعر 149 ج 😍",
+      "ts": 1777711105295,
+      "read": false
+    },
+    {
+      "id": "deab9ea2-81d8-4bf4-991f-75d692f8d039",
+      "type": "chat",
+      "chatId": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messagePreview": "أنا مهتمة بـ \"المجموعات \" بسعر 12131 😍",
+      "ts": 1777711111150,
+      "read": false
+    },
+    {
+      "id": "384b308e-9739-42fe-9543-fbcd1f5f9e5a",
+      "type": "like",
+      "productId": "579588be-d67b-428c-aa55-ac18ed693743",
+      "productNameAr": "المجموعات ",
+      "productNameEn": "sets1",
+      "productImg": "/uploads/1777652989137-o37z6k07x.jpeg",
+      "ts": 1777711145552,
+      "read": false
+    },
+    {
+      "id": "52bc1506-fa0f-4e88-98d0-07671e3083dd",
+      "type": "like",
+      "productId": "579588be-d67b-428c-aa55-ac18ed693743",
+      "productNameAr": "المجموعات ",
+      "productNameEn": "sets1",
+      "productImg": "/uploads/1777652989137-o37z6k07x.jpeg",
+      "ts": 1777711161726,
+      "read": false
+    }
+  ],
+  "chats": [
+    {
+      "id": "0391aec3-201a-4f0a-ba09-25c161011598",
+      "userName": "d",
+      "messages": [
+        {
+          "id": "6f20fd7d-b58f-4a8d-8f4e-4704b98d2365",
+          "from": "user",
+          "text": "j",
+          "ts": 1777654292606
+        },
+        {
+          "id": "ed6a5c8d-2944-43e3-97a6-82d126b9bfeb",
+          "from": "admin",
+          "text": "ddd",
+          "ts": 1777654303087
+        },
+        {
+          "id": "d7aa7f52-3328-4a5a-886a-c14418b41c18",
+          "from": "user",
+          "text": "ddd",
+          "ts": 1777654320682
+        },
+        {
+          "id": "f8301c21-098f-454e-bda0-c20c8d5d8f92",
+          "from": "user",
+          "text": "ssd",
+          "ts": 1777654324647
+        },
+        {
+          "id": "f188eee3-e4e8-4505-ad46-2b44d4a18cfb",
+          "from": "admin",
+          "text": "fds",
+          "ts": 1777654329082
+        },
+        {
+          "id": "dd63fb50-fc75-44d7-88a4-35e5bb79a188",
+          "from": "user",
+          "text": "ردّ على الستوري \"kjnlkn\": d",
+          "ts": 1777654353445
+        },
+        {
+          "id": "32b0331e-23f6-4b74-9a89-5d3fe94b2480",
+          "from": "admin",
+          "text": "fkf",
+          "ts": 1777654565546
+        },
+        {
+          "id": "95236b0f-1571-4974-a1db-0f1b46dfb21a",
+          "from": "user",
+          "text": "ردّ على الستوري \"kjnlkn\": يي",
+          "ts": 1777707745471
+        },
+        {
+          "id": "c543aab0-5663-4158-a2c2-5ce3b62a8de5",
+          "from": "user",
+          "text": "ردّ على الستوري \"kjnlkn\": dd",
+          "ts": 1777708103822
+        },
+        {
+          "id": "495c6992-869f-46ed-a002-e82ff28e28bf",
+          "from": "user",
+          "text": "d",
+          "ts": 1777708438106
+        },
+        {
+          "id": "725af5d8-1c87-48eb-ada7-9ad8eca8e152",
+          "from": "user",
+          "text": "ddd",
+          "ts": 1777708444360
+        },
+        {
+          "id": "77ea13ea-bc2a-4eb2-82a7-fac0dc6eda4e",
+          "from": "user",
+          "text": "dd",
+          "ts": 1777708449617
+        },
+        {
+          "id": "f67272c1-02a2-4165-9398-09c4f2e7291f",
+          "from": "admin",
+          "text": "fdfsd",
+          "ts": 1777708481144
+        },
+        {
+          "id": "53ed7b10-5d12-46d4-b596-bd0e7ef535c1",
+          "from": "user",
+          "text": "jj",
+          "ts": 1777708898919
+        },
+        {
+          "id": "f9de4b76-fe27-4331-81b2-ab5886bdd782",
+          "from": "user",
+          "text": "6545",
+          "ts": 1777708921350
+        },
+        {
+          "id": "b75f624c-9a14-4f98-90c8-ae99f6700dd3",
+          "from": "user",
+          "text": "بكام دي",
+          "ts": 1777708973967
+        },
+        {
+          "id": "253a6699-2c4d-4e5e-9175-3a163ac86252",
+          "from": "user",
+          "text": "dd",
+          "ts": 1777709029689,
+          "replyTo": {
+            "type": "story",
+            "title": "kjnlkn",
+            "img": "/uploads/1777653256339-adv9mtgvnde.jpeg"
+          }
+        },
+        {
+          "id": "cdfe35eb-e6ab-42ed-a9e0-7cd5c43789aa",
+          "from": "user",
+          "text": "بكام",
+          "ts": 1777709045579,
+          "replyTo": {
+            "type": "story",
+            "title": "kjnlkn",
+            "img": "/uploads/1777653256339-adv9mtgvnde.jpeg"
+          }
+        },
+        {
+          "id": "4518315a-99b4-41eb-beb2-53cbdfda376c",
+          "from": "user",
+          "text": "dddd",
+          "ts": 1777709175224,
+          "replyTo": {
+            "type": "story",
+            "title": "56464",
+            "img": "/uploads/1777709145926-ud9hvc3579m.png"
+          }
+        },
+        {
+          "id": "867a70ea-8c1e-4273-9cf3-804164d9b33e",
+          "from": "user",
+          "text": "dd",
+          "ts": 1777709247709,
+          "replyTo": null
+        },
+        {
+          "id": "1804969b-a4fc-430a-abfc-b6b30717cf60",
+          "from": "admin",
+          "text": "ddd",
+          "ts": 1777709256936,
+          "replyTo": null
+        },
+        {
+          "id": "14c76e1b-732e-453e-b9c3-e43cff092c30",
+          "from": "admin",
+          "text": "555",
+          "ts": 1777709523366,
+          "replyTo": null
+        },
+        {
+          "id": "d52c5420-ceef-4148-aaf1-b6a3af071dd4",
+          "from": "user",
+          "text": "55",
+          "ts": 1777710529216,
+          "replyTo": null
+        },
+        {
+          "id": "3292acd6-3e9f-4a1e-aeb0-5b9b58b31162",
+          "from": "user",
+          "text": "4",
+          "ts": 1777710548003,
+          "replyTo": null
+        },
+        {
+          "id": "f46f45ec-5e2d-4873-84d9-849099a3063d",
+          "from": "user",
+          "text": "55",
+          "ts": 1777710617480,
+          "replyTo": null
+        },
+        {
+          "id": "87ba3b58-159a-4e26-8258-45a731feedd0",
+          "from": "user",
+          "text": "j",
+          "ts": 1777710629392,
+          "replyTo": null
+        },
+        {
+          "id": "2d2996ff-3f75-4861-9286-dcecc7277bec",
+          "from": "user",
+          "text": "jjj",
+          "ts": 1777710636163,
+          "replyTo": {
+            "type": "story",
+            "title": "56464",
+            "img": "/uploads/1777709145926-ud9hvc3579m.png"
+          }
+        },
+        {
+          "id": "5dc63430-320c-4be9-9dc0-13f62750e4c8",
+          "from": "user",
+          "text": "g",
+          "ts": 1777710829165,
+          "replyTo": null
+        },
+        {
+          "id": "873a95a1-b404-4bc5-b05e-966ec439bdd3",
+          "from": "user",
+          "text": "v",
+          "ts": 1777710841310,
+          "replyTo": null
+        },
+        {
+          "id": "3ceac942-1000-4c40-b13b-800eb8660ebc",
+          "from": "user",
+          "text": "vv",
+          "ts": 1777710847723,
+          "replyTo": {
+            "type": "story",
+            "title": "56464",
+            "img": "/uploads/1777709145926-ud9hvc3579m.png"
+          }
+        },
+        {
+          "id": "481707bd-c36b-49a1-86d3-f05ceac43234",
+          "from": "user",
+          "text": "ss",
+          "ts": 1777710853317,
+          "replyTo": null
+        },
+        {
+          "id": "6e33566e-9b74-45de-9b0e-d625d67dd4ec",
+          "from": "user",
+          "text": "d",
+          "ts": 1777710875022,
+          "replyTo": null
+        },
+        {
+          "id": "655c7b94-76e4-49bd-ac36-9655e62bf4ae",
+          "from": "user",
+          "text": "s",
+          "ts": 1777710956566,
+          "replyTo": null
+        },
+        {
+          "id": "cbe4feb3-772b-4c26-8847-b818bc486856",
+          "from": "user",
+          "text": "رد",
+          "ts": 1777710984318,
+          "replyTo": null
+        },
+        {
+          "id": "23b58177-5fcb-42d8-b517-196e5e77534d",
+          "from": "user",
+          "text": "أنا مهتمة بـ \"Velvet Matte Lipstick\" بسعر 199 ج 😍",
+          "ts": 1777711083902,
+          "replyTo": {
+            "type": "product",
+            "name": "Velvet Matte Lipstick",
+            "price": "199 ج",
+            "img": ""
+          }
+        },
+        {
+          "id": "35eb36e3-18f4-4894-9109-65eefc5ea42a",
+          "from": "user",
+          "text": "أنا مهتمة بـ \"Rose Glow Blush\" بسعر 149 ج 😍",
+          "ts": 1777711105295,
+          "replyTo": {
+            "type": "product",
+            "name": "Rose Glow Blush",
+            "price": "149 ج",
+            "img": ""
+          }
+        },
+        {
+          "id": "7b96c18b-b517-4208-8a79-fee39cd4f5ab",
+          "from": "user",
+          "text": "أنا مهتمة بـ \"المجموعات \" بسعر 12131 😍",
+          "ts": 1777711111150,
+          "replyTo": {
+            "type": "product",
+            "name": "المجموعات ",
+            "price": "12131",
+            "img": "/uploads/1777652989137-o37z6k07x.jpeg"
+          }
+        }
+      ],
+      "lastTs": 1777711111150,
+      "unreadByAdmin": 0,
+      "createdAt": 1777654289370
+    },
+    {
+      "id": "45f3431d-5e7a-473f-b940-56cf3cff161c",
+      "userName": "mo",
+      "messages": [
+        {
+          "id": "614d4ae2-8cc9-4fad-acab-b85594e4fa18",
+          "from": "user",
+          "text": "jo",
+          "ts": 1777709286311,
+          "replyTo": null
+        },
+        {
+          "id": "be95c538-c963-4409-b5bd-1cc1312b7686",
+          "from": "admin",
+          "text": "55",
+          "ts": 1777709535513,
+          "replyTo": null
+        },
+        {
+          "id": "a3942201-05c4-4ca5-bba1-e1a309a21e6b",
+          "from": "user",
+          "text": "d",
+          "ts": 1777710889830,
+          "replyTo": null
+        },
+        {
+          "id": "585c3ad6-d901-40f2-84ba-b87543ab6f6d",
+          "from": "user",
+          "text": "d",
+          "ts": 1777710894334,
+          "replyTo": null
+        }
+      ],
+      "lastTs": 1777710894334,
+      "unreadByAdmin": 0,
+      "createdAt": 1777709284722
+    }
+  ]
+}

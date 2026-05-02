@@ -1,0 +1,248 @@
+/**
+ * StoriesViewer.css — Instagram-style full-screen story viewer.
+ */
+
+.sv-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+  background: #000;
+  animation: overlayFade 0.22s ease;
+  isolation: isolate;
+}
+
+/* ── Background image ── */
+.sv-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.sv-bg__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.sv-bg__empty {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: var(--gold);
+  font-family: var(--font-display);
+}
+
+.sv-bg__empty span { font-size: 4rem; }
+.sv-bg__empty p    { font-size: 1.4rem; }
+
+/* Top/bottom scrim gradients for readability */
+.sv-bg__scrim-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 160px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.sv-bg__scrim-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 160px;
+  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+/* ── Progress bars ── */
+.sv-progress {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  gap: 4px;
+  z-index: 20;
+}
+
+.sv-progress__track {
+  flex: 1;
+  height: 2.5px;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.sv-progress__fill {
+  height: 100%;
+  background: #fff;
+  border-radius: 2px;
+  transition: none;
+}
+
+/* ── Header ── */
+.sv-header {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  z-index: 20;
+}
+
+.sv-header__info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sv-header__ring {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--story-ring);
+  padding: 2.5px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-size: 1rem;
+}
+
+.sv-header__thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+
+.sv-header__name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+.sv-header__sub {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.75);
+  margin-top: 1px;
+}
+
+.sv-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.sv-header__pause,
+.sv-header__close {
+  color: #fff;
+  font-size: 1rem;
+  opacity: 0.88;
+  transition: opacity var(--t-fast);
+  display: flex;
+  align-items: center;
+}
+
+.sv-header__pause:hover,
+.sv-header__close:hover { opacity: 1; }
+
+/* ── Tap zones ── */
+.sv-tap {
+  position: absolute;
+  top: 0;
+  bottom: 80px;  /* don't cover the bottom bar */
+  width: 38%;
+  background: transparent;
+  z-index: 10;
+}
+
+.sv-tap--prev { right: 0; }
+.sv-tap--next { left: 0; }
+
+/* ── Bottom bar ── */
+.sv-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 14px 16px 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 20;
+}
+
+.sv-bottom__reply-input {
+  flex: 1;
+  text-align: left;
+  padding: 11px 18px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid rgba(255,255,255,0.55);
+  background: rgba(255,255,255,0.10);
+  backdrop-filter: blur(10px);
+  color: rgba(255,255,255,0.88);
+  font-size: 0.9rem;
+  font-family: var(--font-body);
+  transition: border-color var(--t-fast), background var(--t-fast);
+}
+
+.sv-bottom__reply-input:hover {
+  border-color: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.16);
+}
+
+/* Like button */
+.sv-bottom__like {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--t-fast);
+  flex-shrink: 0;
+}
+
+.sv-bottom__like--active {
+  animation: beat 0.45s ease;
+}
+
+/* Share button */
+.sv-bottom__share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  opacity: 0.9;
+  transition: opacity var(--t-fast), transform var(--t-fast);
+}
+
+.sv-bottom__share:hover { opacity: 1; transform: translateY(-1px); }
+
+/* ── Toast ── */
+.sv-toast {
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.72);
+  color: #fff;
+  padding: 8px 22px;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  white-space: nowrap;
+  z-index: 30;
+  animation: fadeUp 0.25s ease;
+  pointer-events: none;
+}

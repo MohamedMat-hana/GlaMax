@@ -1,0 +1,65 @@
+/**
+ * variables.css — Global CSS custom properties (design tokens).
+ * Import this first in global.css so all components can use these vars.
+ */
+
+:root {
+  /* ── Colors ── */
+  --gold:           #c9a84c;
+  --gold-dark:      #8b6010;
+  --gold-light:     #e8c97a;
+  --gold-glow:      rgba(201, 168, 76, 0.2);
+  --gold-glow-str:  rgba(201, 168, 76, 0.45);
+
+  --bg:             #080808;
+  --bg-card:        #111111;
+  --bg-elevated:    #0d0f13;
+  --bg-overlay:     rgba(0, 0, 0, 0.75);
+  --bg-glass:       rgba(255, 255, 255, 0.06);
+
+  --text-primary:   #f0e8dd;
+  --text-muted:     #666666;
+  --text-soft:      #aaa;
+
+  --danger:         #e85050;
+  --danger-dark:    #b03030;
+  --success:        #4caf83;
+
+  --border:         rgba(201, 168, 76, 0.15);
+  --border-focus:   rgba(201, 168, 76, 0.55);
+
+  /* ── Gradients ── */
+  --grad-gold:  linear-gradient(135deg, #c9a84c 0%, #8b6010 50%, #c9a84c 100%);
+  --grad-ig:    linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  --grad-card:  linear-gradient(180deg, transparent 45%, rgba(0,0,0,0.92) 100%);
+
+  /* ── Story ring ── */
+  --story-ring: linear-gradient(135deg, #c9a84c 0%, #6b3510 50%, #c9a84c 100%);
+
+  /* ── Typography ── */
+  --font-display: 'Playfair Display', serif;
+  --font-body:    'Tajawal', sans-serif;
+
+  /* ── Spacing ── */
+  --gap-xs:   6px;
+  --gap-sm:   12px;
+  --gap-md:   20px;
+  --gap-lg:   32px;
+  --gap-xl:   48px;
+
+  /* ── Radii ── */
+  --radius-sm:   8px;
+  --radius-card: 18px;
+  --radius-btn:  12px;
+  --radius-pill: 999px;
+
+  /* ── Shadows ── */
+  --shadow-card:   0 4px 30px rgba(0, 0, 0, 0.6);
+  --shadow-gold:   0 0 20px rgba(201, 168, 76, 0.35);
+  --shadow-modal:  0 8px 60px rgba(0, 0, 0, 0.8);
+
+  /* ── Transitions ── */
+  --t-fast:   0.15s ease;
+  --t-med:    0.28s ease;
+  --t-slow:   0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}

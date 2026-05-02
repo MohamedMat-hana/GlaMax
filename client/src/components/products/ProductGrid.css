@@ -1,0 +1,61 @@
+/**
+ * ProductGrid.css — Filter pills and responsive product grid layout.
+ */
+
+.product-grid-section {
+  padding: 0 var(--gap-md) var(--gap-xl);
+}
+
+/* ── Filter pills ── */
+.product-filters {
+  display: flex;
+  gap: var(--gap-sm);
+  overflow-x: auto;
+  padding-bottom: var(--gap-md);
+  scrollbar-width: none;
+  margin-bottom: var(--gap-md);
+}
+
+.product-filters::-webkit-scrollbar { display: none; }
+
+.filter-pill {
+  padding: 7px 18px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  white-space: nowrap;
+  background: var(--bg-card);
+  transition: all var(--t-fast);
+  flex-shrink: 0;
+  font-family: var(--font-body);
+}
+
+.filter-pill:hover {
+  border-color: var(--gold);
+  color: var(--text-primary);
+}
+
+.filter-pill--active {
+  background: var(--gold);
+  color: var(--bg);
+  border-color: var(--gold);
+  font-weight: 700;
+}
+
+/* ── Grid ── */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: var(--gap-md);
+}
+
+/* ── States ── */
+.pg-state {
+  text-align: center;
+  color: var(--text-muted);
+  padding: var(--gap-xl);
+  font-size: 0.95rem;
+}
+
+.pg-state--error { color: var(--danger); }

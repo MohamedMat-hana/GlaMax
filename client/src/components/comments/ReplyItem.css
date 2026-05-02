@@ -1,0 +1,75 @@
+/**
+ * ReplyItem.css — Styles for a single nested reply row.
+ */
+
+.reply-item {
+  display: flex;
+  gap: 8px;
+  padding: 8px 0;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+.reply-item__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.reply-item__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 3px;
+  flex-wrap: wrap;
+}
+
+.reply-item__name {
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.reply-item__crown {
+  font-size: 0.72rem;
+  background: var(--gold-glow);
+  color: var(--gold);
+  border: 1px solid var(--border);
+  padding: 2px 7px;
+  border-radius: var(--radius-pill);
+}
+
+.reply-item__time {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.reply-item__text {
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  line-height: 1.55;
+  margin-bottom: 4px;
+}
+
+.reply-item__actions {
+  display: flex;
+  gap: var(--gap-sm);
+  align-items: center;
+}
+
+.reply-item__like-btn {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  transition: color var(--t-fast);
+}
+
+.reply-item__like-btn:hover { color: var(--danger); }
+
+.reply-item__del-btn {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  transition: color var(--t-fast);
+}
+
+.reply-item__del-btn:hover { color: var(--danger); }

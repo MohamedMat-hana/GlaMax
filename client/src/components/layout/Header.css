@@ -1,0 +1,97 @@
+/**
+ * Header.css — Sticky header bar styles.
+ */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  background: rgba(8, 8, 8, 0.88);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header__logo-img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--gold);
+  box-shadow: 0 0 8px var(--gold-glow-str);
+}
+
+.header__logo-text {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 2px;
+}
+
+.header__logo-sub {
+  font-size: 0.7rem;
+  letter-spacing: 4px;
+  color: var(--text-muted);
+  margin-right: 6px;
+  vertical-align: super;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+}
+
+.header__lang {
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  color: var(--gold);
+  font-size: 0.82rem;
+  font-weight: 700;
+  font-family: var(--font-body);
+  background: var(--bg-glass);
+  letter-spacing: 1px;
+  transition: border-color var(--t-fast), background var(--t-fast);
+}
+
+.header__lang:hover {
+  border-color: var(--gold);
+  background: var(--gold-glow);
+}
+
+.header__chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  background: var(--bg-glass);
+  font-size: 0.88rem;
+  transition: border-color var(--t-fast), background var(--t-fast);
+}
+
+.header__chip:hover {
+  border-color: var(--gold);
+  background: var(--gold-glow);
+}
+
+.header__chip--guest {
+  color: var(--text-muted);
+}
+
+.header__chip--guest svg {
+  stroke: var(--text-muted);
+}

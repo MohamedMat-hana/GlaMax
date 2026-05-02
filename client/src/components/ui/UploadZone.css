@@ -1,0 +1,52 @@
+/**
+ * UploadZone.css — Dashed drag-and-drop upload area styling.
+ */
+
+.upload-zone {
+  border: 2px dashed var(--gold-dark);
+  border-radius: var(--radius-card);
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color var(--t-med), background var(--t-med);
+  overflow: hidden;
+  position: relative;
+}
+
+.upload-zone:hover,
+.upload-zone--drag {
+  border-color: var(--gold);
+  background: var(--gold-glow);
+}
+
+.upload-zone__placeholder {
+  text-align: center;
+  color: var(--text-muted);
+  padding: var(--gap-md);
+  pointer-events: none;
+}
+
+.upload-zone__icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: var(--gap-xs);
+}
+
+.upload-zone__placeholder p {
+  font-size: 0.95rem;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+
+.upload-zone__placeholder small {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.upload-zone__preview {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
