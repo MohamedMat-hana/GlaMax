@@ -1,40 +1,47 @@
-/**
- * UserContext.jsx — Global user session context.
- * Provides the current user (name + email), admin token, and setters
- * to all components without prop drilling.
- */
-
 import { createContext, useContext, useState, useCallback } from 'react';
 import { saveUser } from '../api/client';
 
 const UserContext = createContext(null);
 
-/** Hook to consume the user context from any component */
+const USER_KEY  = 'glamax_user';
+const TOKEN_KEY = 'glamax_admin_token';
+
 export function useUser() {
   return useContext(UserContext);
 }
 
-/**
- * Provider component — wrap around the entire app in main.jsx.
- * @param {{ children: React.ReactNode }} props
- */
 export function UserProvider({ children }) {
-  const [user,       setUser]       = useState(null);   // { name, email }
-  const [adminToken, setAdminToken] = useState(null);   // string | null
+  const [user, setUser] = useState(() => {
+    try {
+      const s = localStorage.getItem(USER_KEY);
+      return s ? JSON.parse(s) : null;
+    } catch { return null; }
+  });
 
-  /** Persist user profile to server and update local state */
+  const [adminToken, setAdminTokenState] = useState(
+    () => localStorage.getItem(TOKEN_KEY) || null
+  );
+
   const login = useCallback(async ({ name, email }) => {
     await saveUser({ name, email }).catch(() => {});
-    setUser({ name, email: email || '' });
+    const u = { name, email: email || '' };
+    setUser(u);
+    localStorage.setItem(USER_KEY, JSON.stringify(u));
   }, []);
 
-  /** Clear user session */
-  const logout = useCallback(() => setUser(null), []);
+  const logout = useCallback(() => {
+    setUser(null);
+    localStorage.removeItem(USER_KEY);
+  }, []);
 
-  const isAdmin = Boolean(adminToken);
+  const setAdminToken = useCallback((token) => {
+    setAdminTokenState(token);
+    if (token) localStorage.setItem(TOKEN_KEY, token);
+    else        localStorage.removeItem(TOKEN_KEY);
+  }, []);
 
   return (
-    <UserContext.Provider value={{ user, login, logout, adminToken, setAdminToken, isAdmin }}>
+    <UserContext.Provider value={{ user, login, logout, adminToken, setAdminToken, isAdmin: Boolean(adminToken) }}>
       {children}
     </UserContext.Provider>
   );
