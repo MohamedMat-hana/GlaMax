@@ -26,7 +26,8 @@ export default function AdminDashboard() {
   const { message, type, show }      = useToast();
   const bellWrapRef                  = useRef(null);
 
-  const adminLoginPath = window.location.port === '5174' ? '/' : '/admin';
+  const base           = import.meta.env.VITE_ADMIN_BASE || '';
+  const adminLoginPath = base === '/' ? '/' : '/admin';
 
   useEffect(() => {
     if (!adminToken) navigate(adminLoginPath);

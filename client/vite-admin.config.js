@@ -24,6 +24,10 @@ function serveAdminHtml() {
 export default defineConfig({
   plugins: [react(), serveAdminHtml()],
   root: '.',
+  // Inject VITE_ADMIN_BASE so LoginPage and Dashboard know they're standalone
+  define: {
+    'import.meta.env.VITE_ADMIN_BASE': JSON.stringify('/')
+  },
   build: {
     rollupOptions: { input: './admin.html' }
   },

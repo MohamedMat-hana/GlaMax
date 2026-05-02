@@ -29,7 +29,9 @@ export default function AdminLoginPage() {
       const { token } = await adminLogin(password);
       setAdminToken(token);
       // Support both standalone admin host (/dashboard) and embedded (/admin/dashboard)
-      navigate(window.location.port === '5174' ? '/dashboard' : '/admin/dashboard');
+      // VITE_ADMIN_BASE='/' on standalone admin host, '/admin' on client host
+      const base = import.meta.env.VITE_ADMIN_BASE || '';
+      navigate(base === '/' ? '/dashboard' : '/admin/dashboard');
     } catch {
       setError('كلمة المرور غير صحيحة');
       setShaking(true);
