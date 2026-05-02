@@ -1,9 +1,10 @@
-const router       = require('express').Router();
-const { v4: uuid } = require('uuid');
-const Product      = require('../models/Product');
-const Notification = require('../models/Notification');
-const { adminAuth }= require('../middleware/auth');
-const upload       = require('../middleware/upload');
+const router            = require('express').Router();
+const { v4: uuid }      = require('uuid');
+const Product           = require('../models/Product');
+const Notification      = require('../models/Notification');
+const { adminAuth }     = require('../middleware/auth');
+const upload            = require('../middleware/upload');
+const { uploadBuffer }  = require('../utils/cloudinary');
 
 router.get('/', async (req, res) => {
   const products = await Product.find().sort({ createdAt: -1 });
@@ -15,6 +16,11 @@ router.post('/', adminAuth, upload.single('image'), async (req, res) => {
   if (!nameAr || !price || !categoryAr)
     return res.status(400).json({ error: 'nameAr, price, and categoryAr are required' });
 
+  let img = '';
+  if (req.file) {
+    img = await uploadBuffer(req.file.buffer, req.file.mimetype);
+  }
+
   const product = new Product({
     _id:        uuid(),
     nameAr,
@@ -22,7 +28,7 @@ router.post('/', adminAuth, upload.single('image'), async (req, res) => {
     price,
     categoryAr,
     categoryEn: categoryEn || categoryAr,
-    img:        req.file ? `/uploads/${req.file.filename}` : '',
+    img,
     descAr:     descAr || '',
     descEn:     descEn || descAr || '',
     likes:      0,

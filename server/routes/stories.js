@@ -1,8 +1,9 @@
-const router       = require('express').Router();
-const { v4: uuid } = require('uuid');
-const Story        = require('../models/Story');
-const { adminAuth }= require('../middleware/auth');
-const upload       = require('../middleware/upload');
+const router            = require('express').Router();
+const { v4: uuid }      = require('uuid');
+const Story             = require('../models/Story');
+const { adminAuth }     = require('../middleware/auth');
+const upload            = require('../middleware/upload');
+const { uploadBuffer }  = require('../utils/cloudinary');
 
 router.get('/', async (req, res) => {
   const stories = await Story.find().sort({ createdAt: -1 });
@@ -13,11 +14,16 @@ router.post('/', adminAuth, upload.single('image'), async (req, res) => {
   const { titleAr, titleEn, duration } = req.body;
   if (!titleAr) return res.status(400).json({ error: 'titleAr is required' });
 
+  let img = '';
+  if (req.file) {
+    img = await uploadBuffer(req.file.buffer, req.file.mimetype);
+  }
+
   const story = new Story({
     _id:       uuid(),
     titleAr,
     titleEn:   titleEn || titleAr,
-    img:       req.file ? `/uploads/${req.file.filename}` : '',
+    img,
     duration:  parseInt(duration, 10) || 5000,
     createdAt: Date.now(),
   });
