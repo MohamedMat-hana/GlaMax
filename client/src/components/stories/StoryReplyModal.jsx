@@ -4,9 +4,10 @@
  * continues there. Shows an "open chat" link on success.
  */
 
-import { useState }       from 'react';
-import { useLang }        from '../../context/LangContext';
-import { useUser }        from '../../context/UserContext';
+import { useState }    from 'react';
+import { useLang }     from '../../context/LangContext';
+import { useUser }     from '../../context/UserContext';
+import { getImageUrl } from '../../utils/getImageUrl';
 import { sendStoryReply, startChat, sendMessage } from '../../api/client';
 import { CHAT_ID_KEY, CHAT_NAME_KEY, LAST_SEEN_KEY } from '../chat/ChatPanel';
 import './StoryReplyModal.css';
@@ -82,7 +83,7 @@ export default function StoryReplyModal({ story, onClose, onOpenChat }) {
             {/* Story preview */}
             <div className="srm-story-info">
               {story.img
-                ? <img src={story.img} alt="" className="srm-story-thumb" />
+                ? <img src={getImageUrl(story.img)} alt="" className="srm-story-thumb" />
                 : <span className="srm-story-emoji">✨</span>
               }
               <div>

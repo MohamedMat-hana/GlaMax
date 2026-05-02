@@ -7,6 +7,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { useUser }   from '../../context/UserContext';
 import { useLang }   from '../../context/LangContext';
 import { startChat, fetchMessages, sendMessage } from '../../api/client';
+import { getImageUrl } from '../../utils/getImageUrl';
 import './ChatPanel.css';
 
 export const CHAT_ID_KEY   = 'glamax_chat_id';
@@ -182,7 +183,7 @@ export default function ChatPanel({ onClose }) {
                 {msg.replyTo?.type === 'story' && (
                   <div className="chat-reply-card">
                     {msg.replyTo.img
-                      ? <img src={msg.replyTo.img} alt="" className="chat-reply-card__img" />
+                      ? <img src={getImageUrl(msg.replyTo.img)} alt="" className="chat-reply-card__img" />
                       : <div className="chat-reply-card__empty">✨</div>
                     }
                     <div className="chat-reply-card__footer">
@@ -198,7 +199,7 @@ export default function ChatPanel({ onClose }) {
                 {msg.replyTo?.type === 'product' && (
                   <div className="chat-reply-card">
                     {msg.replyTo.img
-                      ? <img src={msg.replyTo.img} alt="" className="chat-reply-card__img" />
+                      ? <img src={getImageUrl(msg.replyTo.img)} alt="" className="chat-reply-card__img" />
                       : <div className="chat-reply-card__empty">🛍</div>
                     }
                     <div className="chat-reply-card__footer">
@@ -228,7 +229,7 @@ export default function ChatPanel({ onClose }) {
           {productCtx && (
             <div className="chat-panel__product-preview">
               {productCtx.img
-                ? <img src={productCtx.img} alt="" className="chat-panel__product-preview-img" />
+                ? <img src={getImageUrl(productCtx.img)} alt="" className="chat-panel__product-preview-img" />
                 : <span>✨</span>
               }
               <div className="chat-panel__product-preview-info">

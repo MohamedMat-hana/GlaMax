@@ -128,7 +128,7 @@ export default function AdminDashboard() {
                   <div key={n.id} className={`adash__notif-item ${n.read ? '' : 'adash__notif-item--new'}`}>
                     {/* Thumbnail: product image or story image */}
                     {(n.productImg || n.storyImg)
-                      ? <img src={n.productImg || n.storyImg} alt="" className="adash__notif-thumb" />
+                      ? <img src={getImageUrl(n.productImg || n.storyImg)} alt="" className="adash__notif-thumb" />
                       : <span className="adash__notif-thumb adash__notif-thumb--empty">
                           {n.type === 'story_reply' ? '💌' : n.type === 'chat' ? '💬' : '✨'}
                         </span>
@@ -448,7 +448,7 @@ function StoryRepliesTab({ token, onOpenChat }) {
           {/* Story thumbnail */}
           <div className="sreplies__story">
             {r.storyImg
-              ? <img src={r.storyImg} alt="" className="sreplies__thumb" />
+              ? <img src={getImageUrl(r.storyImg)} alt="" className="sreplies__thumb" />
               : <div className="sreplies__thumb sreplies__thumb--empty">✨</div>
             }
             <span className="sreplies__story-name">{r.storyTitleAr || r.storyTitleEn}</span>
@@ -608,7 +608,7 @@ function ChatsTab({ token, pendingChatId, onPendingCleared }) {
                   {msg.replyTo?.type === 'story' && (
                     <div className="chat-reply-card">
                       {msg.replyTo.img
-                        ? <img src={msg.replyTo.img} alt="" className="chat-reply-card__img" />
+                        ? <img src={getImageUrl(msg.replyTo.img)} alt="" className="chat-reply-card__img" />
                         : <div className="chat-reply-card__empty">✨</div>
                       }
                       <div className="chat-reply-card__footer">
@@ -622,7 +622,7 @@ function ChatsTab({ token, pendingChatId, onPendingCleared }) {
                   {msg.replyTo?.type === 'product' && (
                     <div className="chat-reply-card">
                       {msg.replyTo.img
-                        ? <img src={msg.replyTo.img} alt="" className="chat-reply-card__img" />
+                        ? <img src={getImageUrl(msg.replyTo.img)} alt="" className="chat-reply-card__img" />
                         : <div className="chat-reply-card__empty">🛍</div>
                       }
                       <div className="chat-reply-card__footer">
