@@ -75,7 +75,14 @@ export default function AdminDashboard() {
   if (!adminToken) return null;
 
   const unreadCount = notes.filter(n => !n.read).length;
-  const TABS = ['المنتجات 🛍', 'الستوريات 📖', 'التعليقات 💬', 'رسائل الستوري 💌', 'المحادثات 💬'];
+  // hideOnMobile: true hides tab on small screens
+  const TABS = [
+    { label: 'المنتجات 🛍' },
+    { label: 'الستوريات 📖' },
+    { label: 'التعليقات 💬' },
+    { label: 'رسائل الستوري 💌', hideOnMobile: true },
+    { label: 'المحادثات 💬' },
+  ];
 
   // Fetch chats now, find matching ID, then switch tab
   const [pendingChatId, setPendingChatId] = useState(null);
@@ -164,10 +171,10 @@ export default function AdminDashboard() {
       <div className="adash__tabs">
         {TABS.map((t, i) => (
           <button
-            key={t}
-            className={`adash__tab ${tab === i ? 'adash__tab--active' : ''}`}
+            key={t.label}
+            className={`adash__tab ${tab === i ? 'adash__tab--active' : ''} ${t.hideOnMobile ? 'adash__tab--hide-mobile' : ''}`}
             onClick={() => setTab(i)}
-          >{t}</button>
+          >{t.label}</button>
         ))}
       </div>
 
@@ -502,13 +509,14 @@ function CommentsTab() {
 
 // ─── Chats tab ────────────────────────────────────────────────────────────────
 function ChatsTab({ token, pendingChatId, onPendingCleared }) {
-  const [chats,    setChats]    = useState([]);
-  const [activeId, setActiveId] = useState(null);
-  const [thread,   setThread]   = useState([]);
-  const [reply,    setReply]    = useState('');
-  const [loading,  setLoading]  = useState(true);
-  const pollRef                 = useRef(null);
-  const bottomRef               = useRef(null);
+  const [chats,      setChats]      = useState([]);
+  const [activeId,   setActiveId]   = useState(null);
+  const [thread,     setThread]     = useState([]);
+  const [reply,      setReply]      = useState('');
+  const [loading,    setLoading]    = useState(true);
+  const [showThread, setShowThread] = useState(false); // mobile: show thread page
+  const pollRef   = useRef(null);
+  const bottomRef = useRef(null);
 
   const loadChats = useCallback(async () => {
     const data = await fetchAllChats(token).catch(() => []);
@@ -545,6 +553,7 @@ function ChatsTab({ token, pendingChatId, onPendingCleared }) {
 
   async function openChat(id) {
     setActiveId(id);
+    setShowThread(true); // on mobile, switch to thread page
     await markChatRead(id, token).catch(() => {});
     setChats(prev => prev.map(c => c.id === id ? { ...c, unreadByAdmin: 0 } : c));
   }
@@ -563,8 +572,8 @@ function ChatsTab({ token, pendingChatId, onPendingCleared }) {
   if (loading) return <p className="pg-state">جاري التحميل…</p>;
 
   return (
-    <div className="chat-admin">
-      {/* Sidebar */}
+    <div className={`chat-admin ${showThread ? 'chat-admin--thread-open' : ''}`}>
+      {/* Sidebar / Chat list */}
       <div className="chat-admin__list">
         <p className="chat-admin__list-title">المحادثات</p>
         {chats.length === 0 && <p className="chat-admin__empty">لا توجد محادثات بعد ✨</p>}
@@ -586,7 +595,11 @@ function ChatsTab({ token, pendingChatId, onPendingCleared }) {
           <div className="chat-admin__empty-thread"><span>💬</span><p>اختر محادثة</p></div>
         ) : (
           <>
-            <div className="chat-admin__thread-header"><strong>{activeChat.userName}</strong></div>
+            <div className="chat-admin__thread-header">
+              {/* Back button — mobile only */}
+              <button className="chat-admin__back" onClick={() => setShowThread(false)}>←</button>
+              <strong>{activeChat.userName}</strong>
+            </div>
             <div className="chat-admin__messages">
               {thread.map(msg => (
                 <div key={msg.id} className={`chat-msg chat-msg--${msg.from === 'admin' ? 'admin' : 'user'}`}>

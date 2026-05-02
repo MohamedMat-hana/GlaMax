@@ -422,6 +422,8 @@
   border-bottom: 1px solid var(--border);
   font-size: 0.9rem;
   color: var(--text-primary);
+  display: flex;
+  align-items: center;
   background: var(--bg-card);
   flex-shrink: 0;
 }
@@ -482,9 +484,34 @@
 .chat-admin__reply-btn:hover:not(:disabled) { opacity: 0.85; }
 .chat-admin__reply-btn:disabled { opacity: 0.4; }
 
-@media (max-width: 600px) {
-  .chat-admin { grid-template-columns: 1fr; }
-  .chat-admin__list { max-height: 200px; }
+/* ── Mobile chat: full-page switching between list and thread ── */
+@media (max-width: 700px) {
+  .chat-admin {
+    grid-template-columns: 1fr;
+    height: calc(100vh - 180px);
+    position: relative;
+  }
+
+  /* Default: show list, hide thread */
+  .chat-admin__list   { display: flex; }
+  .chat-admin__thread { display: none; }
+
+  /* When a chat is open: hide list, show thread full-screen */
+  .chat-admin--thread-open .chat-admin__list   { display: none; }
+  .chat-admin--thread-open .chat-admin__thread { display: flex; }
+}
+
+/* Back button — only on mobile */
+.chat-admin__back {
+  display: none;
+  font-size: 1.2rem;
+  color: var(--gold);
+  padding: 0 8px 0 0;
+}
+
+@media (max-width: 700px) {
+  .chat-admin__back { display: inline; }
+  .chat-admin__thread-header { gap: 8px; }
 }
 
 .ptab__bi-row {
@@ -607,12 +634,22 @@
   display: flex;
   border-bottom: 1px solid var(--border);
   padding: 0 var(--gap-md);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.adash__tabs::-webkit-scrollbar { display: none; }
+
+/* Hide "رسائل الستوري" tab on mobile */
+@media (max-width: 600px) {
+  .adash__tab--hide-mobile { display: none; }
 }
 
 .adash__tab {
-  padding: 12px 20px;
-  font-size: 0.9rem;
+  padding: 12px 14px;
+  font-size: 0.82rem;
   font-family: var(--font-body);
+  white-space: nowrap;
+  flex-shrink: 0;
   color: var(--text-muted);
   border-bottom: 2px solid transparent;
   margin-bottom: -1px;
