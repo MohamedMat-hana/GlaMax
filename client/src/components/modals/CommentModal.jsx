@@ -5,6 +5,7 @@
 
 import { useEffect }   from 'react';
 import { useLang }     from '../../context/LangContext';
+import { getImageUrl } from '../../utils/getImageUrl';
 import CommentSection  from '../comments/CommentSection';
 import './CommentModal.css';
 
@@ -32,7 +33,7 @@ export default function CommentModal({ product, onClose, onCountChange }) {
         {/* Header */}
         <div className="cm-header">
           {product.img && (
-            <img src={product.img} alt={name} className="cm-header__img" />
+            <img src={getImageUrl(product.img)} alt={name} className="cm-header__img" />
           )}
           <div className="cm-header__info">
             <h3 className="cm-header__name">{name}</h3>

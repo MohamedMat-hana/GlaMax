@@ -6,6 +6,7 @@
 import { useState, useEffect } from 'react';
 import { useLang }             from '../../context/LangContext';
 import { likeProduct, fetchComments } from '../../api/client';
+import { getImageUrl }         from '../../utils/getImageUrl';
 import CommentModal  from '../modals/CommentModal';
 import OrderModal    from '../modals/OrderModal';
 import './ProductCard.css';
@@ -73,7 +74,7 @@ export default function ProductCard({ product, style }) {
       <article className="product-card fade-up" style={style}>
         <div className="product-card__img-wrap">
           {product.img
-            ? <img src={product.img} alt={name} className="product-card__img" />
+            ? <img src={getImageUrl(product.img)} alt={name} className="product-card__img" />
             : <div className="product-card__img-placeholder">✨</div>
           }
           <div className="product-card__overlay" />

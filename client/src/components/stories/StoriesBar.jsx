@@ -3,9 +3,10 @@
  * Displays bilingual title based on current language.
  */
 
-import { useState }  from 'react';
-import { useLang }   from '../../context/LangContext';
-import StoriesViewer from './StoriesViewer';
+import { useState }       from 'react';
+import { useLang }        from '../../context/LangContext';
+import { getImageUrl }    from '../../utils/getImageUrl';
+import StoriesViewer      from './StoriesViewer';
 import './StoriesBar.css';
 
 /** Returns the right title based on lang, supports legacy single-field data */
@@ -39,7 +40,7 @@ export default function StoriesBar({ stories = [] }) {
               <span className="story-bubble__ring">
                 <span className="story-bubble__inner">
                   {story.img
-                    ? <img src={story.img} alt={title} />
+                    ? <img src={getImageUrl(story.img)} alt={title} />
                     : <span className="story-bubble__emoji">✨</span>
                   }
                 </span>

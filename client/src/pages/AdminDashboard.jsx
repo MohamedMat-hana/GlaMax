@@ -13,6 +13,7 @@ import UploadZone               from '../components/ui/UploadZone';
 import Toast, { useToast }      from '../components/ui/Toast';
 import { fetchNotifications, markNotificationsRead, fetchStoryReplies,
          fetchAllChats, fetchMessages, sendMessage, markChatRead } from '../api/client';
+import { getImageUrl } from '../utils/getImageUrl';
 import '../styles/global.css';
 import '../components/chat/ChatPanel.css';
 import './AdminDashboard.css';
@@ -314,7 +315,7 @@ function ProductsTab({ token, show }) {
         {products.map(p => (
           <div key={p.id} className="ptab__product">
             {p.img
-              ? <img src={p.img} alt={p.nameAr || p.name} className="ptab__product-img" />
+              ? <img src={getImageUrl(p.img)} alt={p.nameAr || p.name} className="ptab__product-img" />
               : <div className="ptab__product-img ptab__product-img--empty">✨</div>
             }
             <span className="ptab__cat">{p.categoryAr || p.category}</span>
@@ -392,7 +393,7 @@ function StoriesTab({ token, show }) {
         {stories.map(s => (
           <div key={s.id} className="stab__story">
             {s.img
-              ? <img src={s.img} alt={s.titleAr || s.title} className="stab__story-img" />
+              ? <img src={getImageUrl(s.img)} alt={s.titleAr || s.title} className="stab__story-img" />
               : <div className="stab__story-img stab__story-img--empty">✨</div>
             }
             <p className="stab__story-title">{s.titleAr || s.title}</p>
@@ -492,7 +493,7 @@ function CommentsTab() {
               <span className="ctab__product-cat">{p.categoryAr || p.category}</span>
             </div>
             {p.img
-              ? <img src={p.img} alt="" className="ctab__product-thumb" />
+              ? <img src={getImageUrl(p.img)} alt="" className="ctab__product-thumb" />
               : <div className="ctab__product-thumb ctab__product-thumb--empty">✨</div>
             }
           </button>

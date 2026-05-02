@@ -2,8 +2,9 @@
  * OrderModal.jsx — Instagram product inquiry modal. Fully bilingual via useLang().
  */
 
-import { useRef }  from 'react';
-import { useLang } from '../../context/LangContext';
+import { useRef }        from 'react';
+import { useLang }       from '../../context/LangContext';
+import { getImageUrl }   from '../../utils/getImageUrl';
 import './OrderModal.css';
 
 const IG_USER = import.meta.env.VITE_IG_USER || 'glamaxcrs';
@@ -38,7 +39,7 @@ export default function OrderModal({ product, onClose }) {
 
         <div className="om-product">
           {product.img && (
-            <img src={product.img} alt={product.name} className="om-product__img" />
+            <img src={getImageUrl(product.img)} alt={product.name} className="om-product__img" />
           )}
           <div className="om-product__info">
             <h3 className="om-product__name">{product.name}</h3>

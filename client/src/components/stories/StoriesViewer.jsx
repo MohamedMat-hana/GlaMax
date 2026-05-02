@@ -6,6 +6,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useLang }       from '../../context/LangContext';
+import { getImageUrl }   from '../../utils/getImageUrl';
 import StoryReplyModal   from './StoryReplyModal';
 import './StoriesViewer.css';
 
@@ -106,7 +107,7 @@ export default function StoriesViewer({ stories, startIndex = 0, onClose }) {
       {/* ── Full-screen background image ── */}
       <div className="sv-bg">
         {story.img
-          ? <img src={story.img} alt={story.title} className="sv-bg__img" />
+          ? <img src={getImageUrl(story.img)} alt={story.title} className="sv-bg__img" />
           : <div className="sv-bg__empty"><span>✨</span><p>{storyTitle}</p></div>
         }
         {/* subtle dark gradient so header/footer text is readable */}
@@ -134,7 +135,7 @@ export default function StoriesViewer({ stories, startIndex = 0, onClose }) {
         <div className="sv-header__info">
           <div className="sv-header__ring">
             {story.img
-              ? <img src={story.img} alt="" className="sv-header__thumb" />
+              ? <img src={getImageUrl(story.img)} alt="" className="sv-header__thumb" />
               : <span>✨</span>
             }
           </div>
